@@ -9,6 +9,8 @@
 import UIKit
 
 class TripCollectionViewCell: UICollectionViewCell {
+    
+
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var cityLabel : UILabel!
     @IBOutlet var countryLabel : UILabel!
@@ -16,6 +18,7 @@ class TripCollectionViewCell: UICollectionViewCell {
     @IBOutlet var priceLabel : UILabel!
     @IBOutlet var likeButton  : UIButton!
     
+    var delegate:TripCollectionCellDelegate?
     var isLiked : Bool = false {
         // obserwator - zmienia ikonę w zależności od polubień
         didSet {
@@ -24,4 +27,12 @@ class TripCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    @IBAction func likeButtonTapped(sender: AnyObject) {
+        delegate?.didLikeButtonPressed(cell: self)
+    }
 }
+protocol TripCollectionCellDelegate {
+    func didLikeButtonPressed(cell: TripCollectionViewCell)
+    
+}
+
