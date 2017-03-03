@@ -9,8 +9,12 @@
 import UIKit
 
 class TripViewController: UIViewController {
+    
 
     @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var colectionView: UICollectionView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

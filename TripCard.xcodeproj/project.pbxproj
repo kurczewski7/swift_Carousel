@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB45CCC1E68D6330021C95F /* TripCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45CCB1E68D6330021C95F /* TripCollectionViewController.swift */; };
+		2CE054461E69448D008D4FC4 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE054451E69448D008D4FC4 /* Trip.swift */; };
+		2CE054481E697C58008D4FC4 /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE054471E697C58008D4FC4 /* TripCollectionViewCell.swift */; };
 		F42171A21DD1C03D0093C82D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42171A11DD1C03D0093C82D /* AppDelegate.swift */; };
 		F42171A71DD1C03D0093C82D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42171A51DD1C03D0093C82D /* Main.storyboard */; };
 		F42171A91DD1C03D0093C82D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42171A81DD1C03D0093C82D /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CB45CCB1E68D6330021C95F /* TripCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCollectionViewController.swift; sourceTree = "<group>"; };
+		2CE054451E69448D008D4FC4 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		2CE054471E697C58008D4FC4 /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripCollectionViewCell.swift; path = ../TripCollectionViewCell.swift; sourceTree = "<group>"; };
 		F421719E1DD1C03D0093C82D /* TripCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42171A11DD1C03D0093C82D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42171A61DD1C03D0093C82D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CE054441E693F86008D4FC4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F42171B31DD1C0540093C82D /* TripViewController.swift */,
+				2CB45CCB1E68D6330021C95F /* TripCollectionViewController.swift */,
+				2CE054471E697C58008D4FC4 /* TripCollectionViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2CE0544A1E697E25008D4FC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CE054451E69448D008D4FC4 /* Trip.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		F42171951DD1C03D0093C82D = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +79,13 @@
 		F42171A01DD1C03D0093C82D /* TripCard */ = {
 			isa = PBXGroup;
 			children = (
-				F42171A11DD1C03D0093C82D /* AppDelegate.swift */,
 				F42171A51DD1C03D0093C82D /* Main.storyboard */,
+				2CE0544A1E697E25008D4FC4 /* Model */,
+				2CE054441E693F86008D4FC4 /* Controllers */,
+				F42171A11DD1C03D0093C82D /* AppDelegate.swift */,
 				F42171A81DD1C03D0093C82D /* Assets.xcassets */,
 				F42171AA1DD1C03D0093C82D /* LaunchScreen.storyboard */,
 				F42171AD1DD1C03D0093C82D /* Info.plist */,
-				F42171B31DD1C0540093C82D /* TripViewController.swift */,
 			);
 			path = TripCard;
 			sourceTree = "<group>";
@@ -136,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE054461E69448D008D4FC4 /* Trip.swift in Sources */,
 				F42171A21DD1C03D0093C82D /* AppDelegate.swift in Sources */,
+				2CB45CCC1E68D6330021C95F /* TripCollectionViewController.swift in Sources */,
+				2CE054481E697C58008D4FC4 /* TripCollectionViewCell.swift in Sources */,
 				F42171B41DD1C0540093C82D /* TripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +326,7 @@
 				F42171B21DD1C03D0093C82D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

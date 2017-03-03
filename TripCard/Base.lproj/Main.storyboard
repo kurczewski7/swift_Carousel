@@ -31,7 +31,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7rS-Un-bPu">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7rS-Un-bPu" customClass="TripCollectionViewCell" customModule="TripCard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="66" width="250" height="380"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -96,8 +96,20 @@
                                             <constraint firstItem="gkI-do-TXQ" firstAttribute="centerX" secondItem="rex-aZ-hat" secondAttribute="centerX" id="f1Q-CX-Qto"/>
                                             <constraint firstAttribute="bottom" secondItem="3pj-aE-E4d" secondAttribute="bottom" id="sbY-4w-gUU"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="gkI-do-TXQ" id="zyw-Ji-vyP"/>
+                                            <outlet property="countryLabel" destination="VIM-OJ-Csu" id="Tt5-Kd-sfP"/>
+                                            <outlet property="imageView" destination="rex-aZ-hat" id="XkN-xd-OwA"/>
+                                            <outlet property="likeButton" destination="3zg-WD-NLc" id="ZFR-ox-9mG"/>
+                                            <outlet property="priceLabel" destination="yqc-AY-nJQ" id="gcf-OF-Qbe"/>
+                                            <outlet property="totalDeysLabel" destination="OiS-f4-42D" id="feO-Kh-YsM"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kqc-sf-5fI"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="f0X-eJ-I2B"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Najbardziej popularne miejsca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jf-Cx-weu">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -130,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="V0O-hE-S8t" id="pvD-cY-xRL"/>
+                        <outlet property="colectionView" destination="YvN-eU-aQH" id="4uQ-5Z-odU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
